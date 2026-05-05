@@ -40,12 +40,13 @@ do {
             $saldo += $valorADepositar;
             break;
 
+        default:
+            echo "Opção inválida\n";
+            break;
+
         case 4:
             echo "Adeus\n";
             break;
 
-        default:
-            echo "Opção inválida\n";
-            break;
     }
-} while ($opcao != 4);
+} while ($opcao != 0);
