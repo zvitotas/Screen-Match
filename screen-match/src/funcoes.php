@@ -16,12 +16,12 @@ function incluidoNoPlano(bool $planoPrime, int $anoLancamento): bool {
 
 function criaFilme(string $nome, int $anoLancamento, float $nota, string $genero): Filme
 {
-    $filme = new Filme();
-
-    $filme->nome = $nome;
-    $filme->anoLancamento = $anoLancamento;
-    $filme->genero = $genero;
-    $filme->nota = $nota;
-
-    return $filme;
+    $stringVazia = '';
+    $stringNaoVazia = $stringVazia ? $stringVazia : 'valor padrão';
+   return [
+    'nome' => $nome,
+    'anoLancamento' => $anoLancamento,
+    'nota' => $nota > 0 ? $nota : 0,
+    'genero' => $genero,
+    ];
 }
